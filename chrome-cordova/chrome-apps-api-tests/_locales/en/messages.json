@@ -1,0 +1,11 @@
+{
+  "appNaMe": {
+    "message": "Chrome Spec"
+  },
+  "override2": {
+    "message": "Hurray"
+  },
+  "override3": {
+    "message": "fail"
+  }
+}

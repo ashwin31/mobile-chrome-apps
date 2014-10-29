@@ -1,45 +1,56 @@
-# Installing the Mobile Chrome Apps tools
+## Step 1: Install your development tools
+
+The Chrome Apps for Mobile toolchain can target iOS 6+ and Android 4.x+.
+
+### Development dependencies for all platforms
+
+* [Node.js](http://nodejs.org) version 0.10.0 (or higher) with `npm` is required:
+  * **Windows**: Install Node.js using the installation executables that you can download from [nodejs.org](http://nodejs.org).
+  * **OS X** or **Linux**: Installation executables are also available from [nodejs.org](http://nodejs.org). If you wish to avoid the need for root access, it may be more convenient to install via [nvm](https://github.com/creationix/nvm). For example:
+
+            curl -L https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh
+            source ~/.bash_profile || source ~/.profile || source ~/.bashrc
+            nvm install 0.10
+            nvm alias default 0.10
+
+### Targeting Android
+
+When developing an application for Android, you will also need to install:
+
+* [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 7 (or higher)
+* [Android SDK](https://developer.android.com/sdk/index.html)
+  * We recommend using the "_Get the SDK for an existing IDE_" or "_Android Studio_" methods.
+  * **Linux**: The Android SDK requires 32 bit support libraries. On Ubuntu, get these via: `apt-get install ia32-libs`.
+* **Note:** On Windows, you need [vendor-specific device drivers](http://developer.android.com/tools/extras/oem-usb.html) to connect to certain devices.
 
 
-## Install Dependencies
+### Targeting iOS
 
-iOS and Android are both optional, but you need at least one of them.
+Please note that iOS development can only be done on OS X. In addition, you will need to install:
 
-### iOS
+* [Xcode](https://developer.apple.com/xcode/) 5 (or higher) which includes the Xcode command line tools
+* [ios-deploy](https://github.com/phonegap/ios-deploy) (needed to deploy to an iOS device)
+  * `npm install -g ios-deploy`
+  * If you get a "make: command not found" error, then run this first:
+    * `export PATH="$PATH:$(xcode-select --print-path)/usr/bin"`
+* [ios-sim](https://github.com/phonegap/ios-sim) (needed to deploy to iOS Simulator)
+  * `npm install -g ios-sim`
+* *Optional:* Register as an iOS developer
+  * This is necessary for testing on real devices and for submitting to the app store.
+  * You can skip registration if you only plan to use the iPhone/iPad simulators.
 
-Note: iOS development can only be done on OSX.
-* Install [XCode 4](https://developer.apple.com/xcode/), with the iOS SDK.
-* Install xcode command line tools.
-* You must register as an iOS developer for testing on real devices and for submitting to the app store.  You can skip this if you only plan to use the iPhone/iPad simulators.
+### Install the `cca` command-line tool
 
-### Android
+Install `cca` via npm:
 
-* Install the [Android SDK and Developer Tools](http://developer.android.com/sdk/index.html), which comes bundled with Eclipse.
-* Ensure that the folder with `android` and `adb` commands are added to your `PATH`.
- * Note, you may have to run the `android` command and install platform-tools before you can add `adb` to your `PATH`.
-* Run the `android` tool, and use it to install the Android 4.2.2 SDK, and the Google Play Services APIs.
+    npm install -g cca
 
-### node.js
+To update the toolchain later with new releases, use the same command: `npm install -g cca`.
 
-* Install a _recent_ version of [node.js](http://nodejs.org) (0.10+).
+Confirm that everything is installed correctly by running this command from the command line:
 
-## Clone This Repository
+    cca checkenv
 
-* Clone this repository.  Then run `./mca init` to have it auto-install its dependencies.
+The output should contain the version number of `cca` and information about your Android or iOS SDK installation.
 
-        git clone git://github.com/MobileChromeApps/mobile-chrome-apps.git
-        cd mobile-chrome-apps
-        ./mca init
-        # Optionally, to add global mca command into PATH:
-        npm link
-
-* On Windows, remove the "./" prefix from the last line.
-* The `npm link` step is optional, but will add `mca` command to a global PATH if you have npm (node package manager) set up correctly.
-
-## Experiencing Hiccups?
-
-Please reach out to us at [mobile-chrome-apps@googlegroups.com](mailto:mobile-chrome-apps@googlegroups.com).
-
-## Completed Successfully?
-
-Now read the [Getting Started guide](GettingStarted.md).
+_**Done? Continue to [Step 2: Create a project &raquo;](CreateProject.md)**_

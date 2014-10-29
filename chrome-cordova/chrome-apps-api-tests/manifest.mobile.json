@@ -1,0 +1,32 @@
+{
+  "packageId": "org.chromium.apps.ChromeAppsApiTests",
+  "versionCode": 2,
+  "CFBundleVersion": '0.2.0',
+
+  // pushMessaging
+  "senderId": "429153676186",
+
+  // syncFileSystem
+  "incoming_sync_delay": {
+    "initial": 2000,
+    "maximum": 64000
+  },
+
+  // platform overrides
+  "android": {
+    "oauth2": {
+      "client_id": "420833503950-k76f32itrro0pm55hhu3t7al7dj04djv.apps.googleusercontent.com"
+    }
+  },
+  "ios": {
+    "oauth2": {
+      "client_id": "420833503950-j7sf4dmbuhgnsphg855uqj8khnof8v8b.apps.googleusercontent.com"
+    }
+  },
+  "web": {
+    "oauth2": {
+      "client_id": "420833503950-1ue85qqi4jfhlm4jp8cei9j26t6lml8l.apps.googleusercontent.com"
+    }
+  },
+  "webview":"system"
+}

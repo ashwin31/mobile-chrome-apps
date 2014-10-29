@@ -1,30 +1,12 @@
-[submodule "chrome-cordova"]
-	path = chrome-cordova
-	url = https://github.com/MobileChromeApps/chrome-cordova.git
-[submodule "mobile-chrome-app-samples"]
-	path = mobile-chrome-app-samples
-	url = https://github.com/MobileChromeApps/mobile-chrome-app-samples.git
-[submodule "cordova/cordova-cli"]
-	path = cordova/cordova-cli
-	url = https://github.com/MobileChromeApps/cordova-cli.git
-[submodule "cordova/cordova-js"]
-	path = cordova/cordova-js
-	url = https://git-wip-us.apache.org/repos/asf/cordova-js.git
 [submodule "cordova/cordova-android"]
 	path = cordova/cordova-android
 	url = https://git-wip-us.apache.org/repos/asf/cordova-android.git
 [submodule "cordova/cordova-ios"]
 	path = cordova/cordova-ios
 	url = https://git-wip-us.apache.org/repos/asf/cordova-ios.git
-[submodule "cordova/cordova-plugin-file"]
-	path = cordova/cordova-plugin-file
-	url = https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
-[submodule "cordova/cordova-plugin-inappbrowser"]
-	path = cordova/cordova-plugin-inappbrowser
-	url = https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
-[submodule "cordova/cordova-plugin-network-information"]
-	path = cordova/cordova-plugin-network-information
-	url = https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
-[submodule "cordova/google-play-services"]
-	path = cordova/google-play-services
-	url = https://github.com/MobileChromeApps/google-play-services.git
+[submodule "cordova/cordova-plugins"]
+	path = cordova/cordova-plugins
+	url = https://git-wip-us.apache.org/repos/asf/cordova-plugins.git
+[submodule "cordova/cordova-crosswalk-engine"]
+	path = cordova/cordova-crosswalk-engine
+	url = https://github.com/MobileChromeApps/cordova-crosswalk-engine/

@@ -1,32 +1,56 @@
-# [Mobile Chrome Apps](//github.com/MobileChromeApps/mobile-chrome-apps)
+# Create Chrome Apps for Mobile Using Apache Cordova
+_**The Chrome Apps for Mobile toolchain is in developer preview. We welcome your feedback on the [Github issue tracker](https://github.com/MobileChromeApps/mobile-chrome-apps/issues), the [Chrome Apps developer forum](http://groups.google.com/a/chromium.org/group/chromium-apps/topics), [Stack Overflow](http://stackoverflow.com/questions/tagged/google-chrome-app), and our [G+ Developers page](https://plus.google.com/+GoogleChromeDevelopers/).**_
 
-Mobile Chrome Apps is a toolkit for porting [Chrome Packaged Apps](http://developer.chrome.com/apps) to Android and iOS hybrid web applications, through [Apache Cordova](http://cordova.apache.org/).
+![A Chrome App running on both desktop and mobile](docs/images/todomvc-chromebook.png)
 
-## 30 Second Summary
+## Overview
 
-* You're excited about Chrome Packaged App for Windows, OSX, Linux, and ChromeOS.  Sweet!
-* You've discovered this toolkit for creating Android & iOS hybrid native apps with chrome app polyfills.
-* Follow our Guide (below) to Import your existing chrome app (or start fresh).
-* ???? 
-  * (modify for mobile design, fix bugs, work-around limitations, and test)
-* Publish to the Android Play Store or iOS App Store.
-* Profit!
+Chrome Apps for Mobile is a project based on Apache Cordova to run your [Chrome Apps](https://developer.chrome.com/apps/about_apps) on both Android and iOS. The project provides a native application wrapper around your Chrome App, allowing you to distribute it via the Google Play Store and the Apple App Store. Cordova plugins give your App access to a wide range of APIs, including many of the core Chrome APIs. The newest version of Chrome Apps for Mobile includes Chrome APIs for [identity](https://developer.chrome.com/apps/identity), Google Cloud Messaging ([GCM](https://developer.chrome.com/apps/gcm)) and [rich notifications](https://developer.chrome.com/apps/notifications).
 
-## Requirements
+For an overview and demo of hybrid development, Chrome Apps for Mobile, and our Chrome App Developer Tool for Mobile, check out our Google I/O Bytes video.
 
-Android 4.x and iOS 6+.
+[![Chrome Apps on Android and iOS](docs/images/io-byte-screenshot.png)](http://www.youtube.com/watch?v=nU4lvgTrjFI)
 
-## Documentation
+## Tools
 
-You'll probably want to start with the [Installation Guide](docs/Installation.md).
+![Using CDE, cca, and CADT to develop Chrome Apps for Mobile](docs/images/cde-cadt-diagram.png)
 
-Follow that up with the [Getting Started Guide](docs/GettingStarted.md).
+### [Chrome App Developer Tool for Mobile (CADT)](https://github.com/MobileChromeApps/chrome-app-developer-tool/)
 
-See our somewhat up to date [API Status Page](docs/APIStatus.md).
+CADT is an app for your mobile development device that makes it quick and easy to see your code in action. It provides the Cordova framework of Chrome Apps for Mobile so you can test your code by simply pushing your Chrome App assets to your mobile device (made easy with our tools), which is must faster than packaging up the entire mobile app. This is called **live deploy**.
 
-Find all our documentation in the [`docs/`](docs/) directory.
+With CADT running on your mobile device, live deploy can be initiated from your development computer with either Chrome Dev Editor or the `cca` command line tool, allowing you to instantly preview the Chrome App you're editing, running right on Android or iOS. When you make a change to the code in your editor, you're a quick push away from seeing it straight on your device.
 
+### [The `cca` Command Line Tool](https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/docs/Installation.md#install-the-cca-command-line-tool)
 
-## Discussion
+`cca` provides all the functionality you need to develop and package Chrome Apps for Mobile from the command line. Use it with CADT to rapidly iterate on your code: live deploy allows you to instantly see your Chrome App running on a connected mobile device. When you are ready to publish your Chrome App for Mobile to the Apple App Store and Google Play Store, use `cca` to bundle up your Chrome App into the proper mobile packages.
 
-There is a [public mailing list](mailto:mobile-chrome-apps@googlegroups.com) (mobile-chrome-apps@googlegroups.com) for discussing Mobile Chrome Apps.  You can also visit the [groups page](//groups.google.com/forum/?fromgroups#!forum/mobile-chrome-apps).
+### [Chrome Dev Editor (CDE)](https://github.com/dart-lang/chromedeveditor)
+
+CDE is an IDE built specifically for Chrome Apps. Use it with CADT for live deploy.
+
+## Try it out
+
+Try out Chrome Apps for Mobile by following these steps:
+
+* [Step 1: Install your development tools](https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/docs/Installation.md)
+
+* [Step 2: Create a project](https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/docs/CreateProject.md)
+
+* [Step 3: Develop](https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/docs/Develop.md)
+
+* [Step 4: Next Steps](https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/docs/NextSteps.md)
+
+* [Step 5: Publish](https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/docs/Publish.md)
+
+## Notes and Resources
+
+* The Chrome Apps for Mobile project is built on top of [Apache Cordova](http://cordova.apache.org), the open source mobile development framework for building mobile apps with native capabilities using HTML, CSS and JavaScript. By default, Chrome Apps for Mobile leverage an embeddable Chromium WebView provided by the [Crosswalk](http://crosswalk-project.org/) project by default, which has both [advantages and some tradeoffs](docs/Crosswalk.md).
+
+* There are a few special considerations that you should keep in mind when developing with Cordova. We've listed them in the [considerations section](https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/docs/CordovaConsiderations.md).
+
+* To view which Chrome APIs and other libraries are supported on mobile, visit the [APIs and Libraries page](https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/docs/APIsAndLibraries.md).
+
+## Let's get started
+
+_**Continue to [Step 1: Install your development tools &raquo;](https://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/docs/Installation.md)**_

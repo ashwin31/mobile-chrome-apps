@@ -1,1 +1,5 @@
-# Ignore paths
+.DS_Store
+/node_modules
+!/node_modules/cca-manifest-logic
+/docs/generator/chrome_apps_on_mobile.html
+*.pyc
